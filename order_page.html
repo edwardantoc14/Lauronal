@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page - Espesyal Delicacies</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffeed7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            background-color: #e69127; 
+            padding: 20px;
+            color: white;
+        }
+
+        .logo {
+            width: 100px;
+            margin-right: 20px; 
+            border-radius: 50%;
+        }
+
+        .text-content {
+            text-align: left;
+        }
+
+        .order-section {
+            background-color: white;
+            max-width: 450px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .payment-container {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .payment-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .payment-item input {
+            width: auto;
+            margin: 0;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn-group {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .order-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #c6512b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #E89528;
+            color: black;
+        }
+
+        .return-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: transparent;
+            color: #555;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .return-btn:hover {
+            background-color: #E89528;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <img src="images/New Project (1).jpg" alt="Espesyal Delicacies Logo" class="logo">
+            <div class="text-content">
+                <h1>Espesyal Delicacies</h1>
+                <p>Order your favorite Filipino snacks!</p>
+            </div>
+    </div>
+
+    <section class="order-section">
+        <h2>Place Your Order</h2>
+        
+        <form>
+            <label>Full Name:</label>
+            <input type="text" placeholder="Edward Lauronal" required>
+
+            <label>Select Delicacy:</label>
+            <select required>
+                <optgroup label="₱75.00 Items">
+                    <option>Sapin-Sapin - ₱75.00</option>
+                    <option>Bibingka - ₱75.00</option>
+                    <option>Biko - ₱75.00</option>
+                    <option>Puto - ₱75.00</option>
+                    <option>Cassava Cake - ₱75.00</option>
+                    <option>Maja Blanca - ₱75.00</option>
+                    <option>Cassava Suman - ₱75.00</option>
+                </optgroup>
+                <optgroup label="₱90.00 Items">
+                    <option>Ube Halaya - ₱90.00</option>
+                    <option>Pichi-Pichi - ₱90.00</option>
+                    <option>Polvoron - ₱90.00</option>
+                    <option>Buko Pie - ₱90.00</option>
+                    <option>Buchi - ₱90.00</option>
+                    <option>Filipino Egg Pie - ₱90.00</option>
+                    <option>Coconut Macaroons - ₱90.00</option>
+                </optgroup>
+                <optgroup label="₱100.00 Items">
+                    <option>Pande Coco - ₱100.00</option>
+                    <option>Kalamay - ₱100.00</option>
+                    <option>Pastillas de Leche - ₱100.00</option>
+                    <option>Puto Bumbong - ₱100.00</option>
+                </optgroup>
+                <optgroup  label="₱799.00 Items">
+                    <option>New! Taste of The Provinces Bundle</option>
+                </optgroup>
+            </select>
+
+            <label>Quantity:</label>
+            <input type="number" min="1" value="1">
+
+            <div class="payment-container">
+                <label style="margin-top: 0;">Payment Method:</label>
+                <div class="payment-options">
+                    <label class="payment-item">
+                        <input type="radio" name="payment" value="cash" required> Cash on delivery
+                    </label>
+                    <label class="payment-item">
+                        <input type="radio" name="payment" value="gcash"> GCash
+                    </label>
+                    <label class="payment-item">
+                        <input type="radio" name="payment" value="bank"> Bank
+                    </label>
+                </div>
+            </div>
+
+            <label>Shipping Address:</label>
+            <textarea placeholder="Enter your complete address" rows="3" required></textarea>
+
+            <div class="btn-group">
+                <button type="submit" class="order-btn">Confirm Order</button>
+                <a href="shop.html" class="return-btn">← Return to shop</a>
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>

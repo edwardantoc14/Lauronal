@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Espesyal Delicacies</title>
+<link rel="icon" type="image/x-icon" href="images/New Project (1).jpg">
+<style>
+html {
+    scroll-behavior: smooth;
+}    
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color: #fce9d0;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img {
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    padding: 0 15px;
+    border-right: 1px solid #ccc;
+    line-height: 1;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+.right-menu{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.search-box{
+    padding:5px;
+}
+
+.top-bar{
+    height: 50px;
+    background:#c6512b;
+}
+
+.hero{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+
+.hero-logo{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.welcome{
+    font-size: x-large;
+    text-align:center;
+    padding:40px;
+    margin-bottom: 10px;
+}
+
+.welcome p{
+    max-width:600px;
+    margin: 20px auto;
+}
+
+section .promo-container{
+    padding: 40px 20px;
+}
+
+h1,h2{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.cta-bar {
+    background-color: #C0552D;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-button {
+    background-color: #E89528; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid #B36B1A;
+    transition: transform 0.2s;
+}
+
+.order-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+button {
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.intro-card {
+    background-color: #E28C28;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    margin-top: 50px;
+}
+
+.story-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-story {
+    width: 500px;
+    height: auto;
+}
+
+.Read_more {
+    background-color:  #C0552D;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid #B36B1A;
+    transition: transform 0.2s;
+    margin-left: 45%;
+}
+
+.Read_more:hover {
+    transform: scale(1.05);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px 30px; 
+    
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0 20px;
+}
+
+.product-grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 0.7rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #E28C28;
+    background: #fff;
+}
+
+.btn-view-all {
+    background-color: #E28C28;
+    color: white;
+    padding: 15px 50px;
+    font-weight: bold;
+    border: none;
+    margin-top: 50px;
+}
+
+.view-all-container {
+    text-align: center;
+}
+
+.banner {
+    display: flex;
+    background-color: #C0552D;
+    align-items: center;
+    max-width: 900px;
+    margin: 50px auto;
+    margin-top: 10%;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.content a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover { 
+    color: #ffcc00;
+}
+
+.buy-now-btn {
+    display: inline-block;
+    background-color: #E89528;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+.footer {
+    background-color: #C0552D;
+    padding: 60px 20px;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 15%;
+}
+
+.footer-container {
+   max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.footer-bar img {
+    width: 150px;
+    margin: 0; 
+    border-radius: 50%;
+}
+
+.footer-col {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-col h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.footer-col p {
+    line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/New Project (1).jpg" width="90">
+</div>
+
+<nav>
+<a href="#">HOME</a>
+<a href="shop.html">SHOP</a>
+<a href="#about">ABOUT</a>
+<a href="#contact">CONTACT US</a>
+</nav>
+
+<div class="right-menu">
+<input class="search-box" type="text" placeholder="Search...">
+<a href="login.html">
+    <button>LOGIN</button>
+</a>
+<span>|</span>
+<span>Cart ₱0</span>
+</div>
+
+</header>
+
+<div class="top-bar"></div>
+
+<section class="hero">
+
+<img src="images/hero-logo.jpg" class="hero-logo">
+
+</section>
+
+<section class="welcome">
+
+<h2>Welcome to Espesyal Delicacies</h2>
+
+<i>online shop for local delicacies in the philippines</i>
+
+<p>
+Experience the flavors of the provinces without the travel.
+Whether it's a taste of home or a new discovery, we deliver
+the Philippines’ finest “pasalubong” right to your doorstep.
+</p>
+
+<br>
+
+<p><b>You shop the heritage, we ship the flavor!</b></p>
+
+</section>
+
+<section class="promo-container">
+        <h1>GRAB OUR NEW PROMO BEFORE IT RUNS OUT!!</h1>
+        <div class="promo-image">
+            <img src="images/New Project (10).jpg" alt="Taste of the Provinces Bundle">
+        </div>
+    </section><br>
+
+<div class="cta-bar">
+        <a href="order_page.html" class="order-button">ORDER HERE</a>
+    </div>
+
+    <br><br><br><br>
+
+<section class="story-container">
+    <h2 id="about" style="font-size: 40px;">OUR STORY</h2>
+        <div class="story-image">
+            <img src="images/Gemini_Generated_Image_zf1fnhzf1fnhzf1f.png" alt="Espesyal Delicacies Store Front" class="img-story">
+        </div>
+</section>    
+
+<section class="intro-card">
+    <p>Our passion for Philippine delicacies began with family traditions and cherished
+        memories around homemade kakanin and festive gatherings. Inspired by these
+        flavors of home, we created our brand to share authentic, freshly made Filipino
+        treats with everyone.</p>
+    <p>Each delicacy is prepared with care, using time-honored recipes 
+        that celebrate our rich culture and heritage. From our kitchen
+        to your table, we proudly bring you the truetaste of the Philippines.</p>
+</section>
+
+<div class="Read_more-container">
+    <a href="about.html">
+      <button class="Read_more">Read more →</button>
+    </a>
+</div>
+<div class="product-grid">
+    <div class="product-card">
+        <img src="images/New Project (3).jpg" alt="Sapin-Sapin">
+        <h3>SAPIN-SAPIN</h3>
+        <p class="price">₱75.00</p>
+        <div class="stars">★★★★★</div>
+        <a href="#">Reviews</a>
+        <div class="button-group">
+            <button class="add-to-cart">Add to Cart 🛒</button>
+            <a href="order_page.html"><button>Buy Now</button></a>
+        </div> 
+    </div>
+    <div class="product-card">
+        <img src="images/New Project (4).jpg" alt="Bibingka">
+        <h3>BIBINGKA</h3>
+        <p class="price">₱75.00</p>
+        <div class="stars">★★★★★</div>
+        <a href="#">Reviews</a>
+        <div class="button-group">
+            <button class="add-to-cart">Add to Cart 🛒</button>
+            <a href="order_page.html"><button>Buy Now</button></a>
+        </div> 
+    </div>
+    <div class="product-card">
+        <img src="images/New Project (5).jpg" alt="Biko">
+        <h3>BIKO</h3>
+        <p class="price">₱75.00</p>
+        <div class="stars">★★★★★</div>
+        <a href="#">Reviews</a>
+        <div class="button-group">
+            <button class="add-to-cart">Add to Cart 🛒</button>
+            <a href="order_page.html"><button>Buy Now</button></a>
+        </div> 
+    </div>
+    <div class="product-card">
+        <img src="images/New Project (6).jpg" alt="Puto">
+        <h3>PUTO</h3>
+        <p class="price">₱75.00</p>
+        <div class="stars">★★★★★</div>
+        <a href="#">Reviews</a>
+        <div class="button-group">
+            <button class="add-to-cart">Add to Cart 🛒</button>
+            <a href="order_page.html"><button>Buy Now</button></a>
+        </div>
+    </div>
+     <div class="product-card">
+        <img src="images/New Project (7).jpg" alt="Cassava Cake">
+        <h3>CASSAVA CAKE</h3>
+        <p class="price">₱75.00</p>
+        <div class="stars">★★★★★</div>
+        <a href="#">Reviews</a>
+        <div class="button-group">
+            <button class="add-to-cart">Add to Cart 🛒</button>
+            <a href="order_page.html"><button>Buy Now</button></a>
+        </div> 
+    </div>
+     <div class="product-card">
+        <img src="images/New Project (8).jpg" alt="Maja Blanca">
+        <h3>MAJA BLANCA</h3>
+        <p class="price">₱75.00</p>
+        <div class="stars">★★★★★</div>
+        <a href="#">Reviews</a>
+        <div class="button-group">
+            <button class="add-to-cart">Add to Cart 🛒</button>
+            <a href="order_page.html"><button>Buy Now</button></a>
+        </div> 
+    </div>
+</div>
+
+<div class="view-all-container">
+    <a href="shop.html">
+        <button class="btn-view-all">VIEW ALL</button>
+    </a>
+</div>
+
+<section class="banner">
+    <div class="content">
+        <h2>Craving for something authentic?<br>
+            Try our newly added delicacy!</h2>
+            
+        <a href="shop.html">CLICK HERE TO BUY</a>
+    </div>
+    <div class="banner-img">
+        <img src="images/New Project (9).jpg" alt="newly added delicacy">
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-bar">
+            <img src="images/New Project (1).jpg">
+        </div>
+    
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">SEARCH</a></li>
+                <li><a href="#">BRANCH</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">TERMS OF SERVICE</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-col">
+            <h3>ABOUT US</h3>
+            <p>Espesyal Delicacies brings the authentic flavors of the Philippines heritage straight to your doorstep by sourcing premium regional treats directly from local artisans.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3 id="contact">CONTACT US</h3>
+            <p>For inquiries and concerns, contact us at<br> ☎ (+63) 9319672451 or (+63) 9702932282<br>
+            ⓕ facebook.espesyaldelicacies.com<br>
+            ✉ espesyal_delicacies@gmail.com</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
